@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            background-color: powderblue;
+        }
+        
+        h1 {
+            color: blue;
+        }
+        
+        .blink-style {
+            background: rgb(0, 0, 0);
+        }
+        
+        h3 {
+            text-align: center;
+            font-family: Verdana;
+            color: #ffc310;
+            animation: blink-text 0.8s infinite;
+            font-size: 6em;
+        }
+        
+        @keyframes blink-text {
+            0% {
+                opacity: 0;
+            }
+            50% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1 id="id01">></h1>
+    <div class="blink-style">
+        <h3>_</h3>
+    </div>
+    <script>
+        const paragraphs = ["ab cd"];
+        let intervalFunction = null;
+
+        paragraphs.forEach(paragraph => {
+            console.log(paragraph)
+            for (char of paragraph) {
+                writeParagraph(char);
+            }
+
+        })
+
+        function writeParagraph(char) {
+            if (!char) {
+                clearInterval(intervalFunction);
+                console.log('letra vazia')
+                return;
+            }
+            const htmlParagraph = document.getElementById('id01');
+
+            intervalFunction = setInterval(() => {
+                console.log(char);
+                htmlParagraph.innerHTML = htmlParagraph.innerHTML + char, 1000;
+            }, 1000)
+
+            //setInterval(writeParagraph(paragraph.substring(1)), 1000);
+        }
+    </script>
+</body>
+
+</html>
