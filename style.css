@@ -1,0 +1,28 @@
+
+  h1 {
+    color: blue;
+}
+
+.blink-style {
+    background: rgb(0, 0, 0);
+}
+
+span {
+    text-align: center;
+    font-family: Verdana;
+    color: #ffc310;
+    animation: blink-text 0.8s infinite;
+    font-size: 6em;
+}
+
+@keyframes blink-text {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
