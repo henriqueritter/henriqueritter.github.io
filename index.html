@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Source+Code+Pro:wght@400;500;700&display=swap" rel="stylesheet">
     <title>Document</title>
 
     <style>
@@ -12,18 +15,51 @@
             --backgroundColor: #14271A;
             --mediumTextColor: #1DD767;
             --lightTextColor: #87F1B4;
+            --blinkingTime: 0.8s
         }
         
         * {
             color: var(--mediumTextColor);
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            outline: none;
+            border: none;
+            text-decoration: none;
+            text-transform: capitalize;
+            transition: .2 linear;
+            font-family: 'Inter', sans-serif;
+            font-family: 'Source Code Pro', monospace;
+        }
+        
+        html {
+            font-size: 62.5%;
+            overflow-x: hidden;
+            scroll-padding-top: 9rem;
+            scroll-behavior: smooth;
+        }
+        
+        html::-webkit-scrollbar {
+            width: .8rem;
+        }
+        
+        html::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        
+        html::-webkit-scrollbar-thumb {
+            background: #fff;
+            border-radius: 5rem;
         }
         
         body {
             background-color: var(--backgroundColor);
+            display: grid;
+            justify-content: center;
         }
         
-        .blinking {
-            animation: blink-text 0.8s infinite;
+        #blinking {
+            animation: blink-text var(--blinkingTime) infinite;
         }
         
         @keyframes blink-text {
@@ -43,9 +79,9 @@
 <body>
     <header>
         <nav>
-            <a href="#home">Home</a>
-            <a href="#portfolio">Portfolio</a>
-            <a href="#contact">Contact</a>
+            <a href="#home">HOME</a>
+            <a href="#portfolio">PORTFOLIO</a>
+            <a href="#contact">CONTACT</a>
         </nav>
     </header>
 
@@ -53,8 +89,8 @@
     <section id="home">
         <span>>Henrique Ritter</span><br>
         <span>>Typescript Developer</span><br>
-        <span>>Apigee Developer</span><br>
-        <span id="blinking">>_</span><br>
+        <span>>Apigee Developer</span><br> >
+        <span id="blinking">_</span><br>
     </section>
 
     <section id="portfolio">
@@ -64,9 +100,10 @@
     <section id="contact">
 
     </section>
-    <footer>
-        Henrique Ritter - 2023
-    </footer>
+
+    <section class="footer">
+        <div>created by <span>Henrique Ritter</span> 2023</div>
+    </section>
 
 
 </body>
