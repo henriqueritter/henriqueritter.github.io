@@ -14,8 +14,28 @@
             --lightTextColor: #87F1B4;
         }
         
+        * {
+            color: var(--mediumTextColor);
+        }
+        
         body {
-            background-color: powderblue;
+            background-color: var(--backgroundColor);
+        }
+        
+        .blinking {
+            animation: blink-text 0.8s infinite;
+        }
+        
+        @keyframes blink-text {
+            0% {
+                opacity: 0;
+            }
+            50% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 0;
+            }
         }
     </style>
 </head>
@@ -31,7 +51,10 @@
 
 
     <section id="home">
-
+        <span>>Henrique Ritter</span><br>
+        <span>>Typescript Developer</span><br>
+        <span>>Apigee Developer</span><br>
+        <span id="blinking">>_</span><br>
     </section>
 
     <section id="portfolio">
