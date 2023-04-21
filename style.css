@@ -1,18 +1,122 @@
-
-  h1 {
-    color: blue;
+:root {
+    --backgroundColor: #14271A;
+    --mediumTextColor: #1DD767;
+    --lightTextColor: #87F1B4;
+    --blinkingTime: 0.8s
 }
 
-.blink-style {
-    background: rgb(0, 0, 0);
+* {
+    color: var(--mediumTextColor);
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: .2 linear;
+    font-family: 'Inter', sans-serif;
+    font-family: 'Source Code Pro', monospace;
 }
 
-span {
-    text-align: center;
-    font-family: Verdana;
-    color: #ffc310;
-    animation: blink-text 0.8s infinite;
-    font-size: 6em;
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 9rem;
+    scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar {
+    width: .8rem;
+}
+
+html::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+html::-webkit-scrollbar-thumb {
+    background: #fff;
+    border-radius: 5rem;
+}
+
+body {
+    background-color: var(--backgroundColor);
+    display: grid;
+    justify-content: center;
+}
+
+#blinking {
+    animation: blink-text var(--blinkingTime) infinite;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0.8rem;
+    margin-bottom: 1rem;
+}
+
+.header .navbar a {
+    margin: 2rem;
+    padding-left: 8rem;
+    padding-right: 8rem;
+    font-size: 4rem;
+    transition: 0.2s;
+}
+
+.header .navbar a:hover {
+    color: var(--lightTextColor);
+    background-color: #1DD767;
+    border-bottom: .1rem solid var(--main-color);
+    padding-bottom: .5rem;
+    transition: 0.2s;
+}
+
+#portfolio {
+    background-color: black;
+}
+
+.content {
+    height: 7vh;
+    font-size:3rem;
+    margin-top:8rem;
+}
+
+.footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align:center;
+    justify-content:center;
+  }
+  
+
+.footer .credit {
+    font-size:2rem;
+    font-weight:lighter;
+    padding:1.5rem;
+  }
+
+/* media queries */
+
+@media(max-width:991px) {
+    html {
+        font-size: 55%;
+    }
+    .header {
+        padding: 1.5rem;
+    }
+    section {
+        padding: 2rem;
+    }
+}
+
+@media(max-width:450px){
+    html {
+        font-size:50%;
+    }
 }
 
 @keyframes blink-text {
