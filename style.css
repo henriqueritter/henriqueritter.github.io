@@ -13,7 +13,6 @@
     outline: none;
     border: none;
     text-decoration: none;
-    text-transform: capitalize;
     transition: .2 linear;
     font-family: 'Inter', sans-serif;
     font-family: 'Source Code Pro', monospace;
@@ -73,10 +72,6 @@ body {
     transition: 0.2s;
 }
 
-#portfolio {
-    background-color: black;
-}
-
 .content {
     height: 7vh;
     font-size:3rem;
@@ -107,6 +102,12 @@ body {
     }
     .header {
         padding: 1.5rem;
+    }
+    .header .navbar a {
+        font-size:3.2rem;
+        margin:1.2rem;
+        padding-left:5rem;
+        padding-right:5rem;
     }
     section {
         padding: 2rem;
