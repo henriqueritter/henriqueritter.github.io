@@ -105,7 +105,7 @@ h1{
 
 hr { 
     border: 1px dashed; 
-    width: 76%; 
+    width: 74%; 
     margin-top: 1%; 
     margin-bottom: 2%; 
 }
@@ -168,9 +168,11 @@ hr {
         padding-top: 8rem;
     }
 
-    hr { border: 1px dashed;
+    hr { 
+        border: 1px dashed;
         width: 76%; 
-        margin-top: 1%; margin-bottom: 2%; 
+        margin-top: 1%; 
+        margin-bottom: 2%; 
     }
 
 
@@ -183,6 +185,7 @@ hr {
     }
     .header {
         padding: 1.5rem;
+        padding-top:3rem;
     }
     .header .navbar a {
         font-size:3.2rem;
@@ -200,7 +203,7 @@ hr {
     }
 
     hr { border: 1px dashed;
-        width: 96%; 
+        width: 97.5%; 
         margin-top: 1%; margin-bottom: 2%; 
     }
 }
@@ -211,12 +214,13 @@ hr {
     }
     .header {
         padding: 1rem;
+        padding-top:4rem;
     }
     .header .navbar a {
         font-size:3rem;
         margin:1rem;
-        padding-left:4rem;
-        padding-right:4rem;
+        padding-left:4.5rem;
+        padding-right:4.5rem;
     }
     section {
         padding-top: 8rem;
@@ -226,6 +230,16 @@ hr {
         padding-top: 4rem;
         font-size:1.2rem;
     }
+
+    #contact h1 {
+        font-size:2.5rem;
+        font-weight:500;
+    }
+
+    hr { border: 1px dashed;
+        width: 99.5%; 
+        margin-top: 1%; margin-bottom: 2%; 
+    }
 }
 
 @media(max-width:580px){
@@ -234,20 +248,32 @@ hr {
     }
     .header {
         padding: 1rem;
+        padding-top:4rem;
+        justify-content:center;
     }
     .header .navbar a {
         font-size:3rem;
         margin:1rem;
-        padding-left:1rem;
-        padding-right:1rem;
+        padding-left:2rem;
+        padding-right:2rem;
     }
     section {
         padding-top: 8rem;
     }
 
     #contact{
-        padding-top: 4rem;
+        padding-top: 6rem;
         font-size:1.1rem;
+    }
+
+    #contact h1 {
+        font-size:2rem;
+        font-weight:500;
+    }
+
+    hr { border: 1px dashed;
+        width: 99.5%; 
+        margin-top: 1%; margin-bottom: 2%; 
     }
 }
 
